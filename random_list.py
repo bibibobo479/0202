@@ -5,23 +5,17 @@ import random
 
 def generate_random_list(n):
     """
-    Генерирует список случайных чисел
-    
-    Параметры:
-    n (int): Номер по журналу
-    
-    Возвращает:
-    list: Список случайных чисел
+    Генерирует список случайных чисел (версия из main)
     """
-    min_value = 24
-    max_value = n * 100
-    num_elements = n + 10
+    min_value = 5
+    max_value = n * 150  # Изменено с *100 на *150
+    num_elements = n + 15  # Изменено с +10 на +15
     
+    # Используем другой метод генерации
     random_list = []
     for i in range(num_elements):
         random_number = random.randint(min_value, max_value)
-        random_list.append(random_number)
-    
+        random_list.append(random_number * 2)  # Добавлено умножение
     return random_list
 
 def main():
